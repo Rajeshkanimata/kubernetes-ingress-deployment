@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/Rajeshkanimata/kubernetes-ingress-deployment.git'
     targetRevision: HEAD
-    path: ARGOCD/AWS
+    path: ARGOCD/MAIN
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: app
