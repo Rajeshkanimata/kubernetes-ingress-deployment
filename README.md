@@ -55,8 +55,9 @@ kubectl create namespace argocd                                                 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml                                             # install argocd agent in client
 kubectl get all -n argocd                                                                                                                               #get details of all
 kubectl edit svc argocd-server -n argocd                                                                                                                # edit your required service like LB or NodePort
+kubectl get secret argocd-initial-admin-secret -n argocd -o yaml                                                                                        # to get secret and next decode and login
 and access through lb or node port through  extrernal IP:port 
-
+be sure to enable sg group and any of the worker node to access if using nodeport
 -----------------------------NGINX INGRESS CONTROLLER -------------------------------------
 
 install NGNIX ingress controller 
